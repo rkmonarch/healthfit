@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:interview/screens/splash_screen.dart';
 
 
@@ -17,7 +18,10 @@ class _MyAppState extends State<MyApp> {
 
    @override
   void initState() {
-     final brightness = Theme.of(context).brightness;
+     var brightness = SchedulerBinding.instance.window.platformBrightness;
+     print(">>>>>>>>>>>>>>>>>>>>>>>>>>>$brightness");
+//  bool isDarkMode = brightness == Brightness.dark;
+      // brightness = Theme.of(context).brightness;
     if (brightness == Brightness.light) {
       setState(() {
         _useDarkTheme = false;

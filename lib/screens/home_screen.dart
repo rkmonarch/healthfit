@@ -151,14 +151,14 @@ class _HomeScreenState extends State<HomeScreen> {
                                     child: LinearProgressIndicator(
                                       minHeight: screenHeight(context) * 0.015,
                                       color: brightness == Brightness.dark
-                                          ? Colors.grey.shade500
+                                          ? Colors.grey.shade300
                                           : Colors.black,
                                       value: int.parse(p!.value.toString()) /
                                           (int.parse(p!.value.toString()) +
                                               1000),
                                       backgroundColor:
                                           brightness == Brightness.light
-                                              ? Colors.grey.shade500
+                                              ? Colors.white
                                               : Colors.black38,
                                     ),
                                   ),
@@ -179,7 +179,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
-                                    "${p!.value}",
+                                    "0",
                                     style: TextStyle(
                                         fontSize: 15,
                                         color: brightness == Brightness.light
@@ -187,7 +187,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                             : Colors.white),
                                   ),
                                   Text(
-                                    "Goal ${int.parse(p!.value.toString()) + 1000}",
+                                    "Goal: ${int.parse(p!.value.toString()) + 1000}",
                                     style: TextStyle(
                                         fontSize: 15,
                                         color: brightness == Brightness.light
@@ -236,7 +236,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     child: LinearProgressIndicator(
                                       minHeight: screenHeight(context) * 0.015,
                                       color: brightness == Brightness.dark
-                                          ? Colors.grey.shade500
+                                          ? Colors.grey.shade200
                                           : Colors.black,
                                       value: double.parse(caloriesburned) /
                                           (double.parse(caloriesburned)
@@ -244,7 +244,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                               1000000),
                                       backgroundColor:
                                           brightness == Brightness.light
-                                              ? Colors.grey.shade500
+                                              ? Colors.white
                                               : Colors.black38,
                                     ),
                                   ),
@@ -265,7 +265,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
-                                    "${caloriesburned.toString()}",
+                                    "0",
                                     style: TextStyle(
                                         fontSize: 15,
                                         color: brightness == Brightness.light
@@ -273,7 +273,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                             : Colors.white),
                                   ),
                                   Text(
-                                    "Goal ${double.parse(caloriesburned).round() + 1000000}",
+                                    "Goal: ${double.parse(caloriesburned).round() + 1000000}",
                                     style: TextStyle(
                                         fontSize: 15,
                                         color: brightness == Brightness.light
@@ -299,8 +299,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       width: screenWidth(context) * 0.5,
                       decoration: BoxDecoration(
                         color: brightness == Brightness.light
-                            ? Colors.grey.shade300
-                            : Colors.black38,
+                            ? Colors.black
+                            : Colors.white,
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: Center(
@@ -310,8 +310,8 @@ class _HomeScreenState extends State<HomeScreen> {
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
                               color: brightness == Brightness.light
-                                  ? Colors.black
-                                  : Colors.white),
+                                  ? Colors.white
+                                  : Colors.black),
                         ),
                       ),
                     ),
