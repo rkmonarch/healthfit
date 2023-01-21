@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:health/health.dart';
 import 'package:interview/resources/custom_icons.dart';
 import 'package:permission_handler/permission_handler.dart';
