@@ -1,4 +1,4 @@
-# Health FIt
+# Health Fit
 
 A new Flutter project.
 
